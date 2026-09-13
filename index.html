@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ricardo Morales</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description"
+        content="Ricardo Morales Computer Science student interested in systems software programming, CPU's, operating systems, and computer architecture.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <h1>Ricardo Morales</h1>
+
+            <p class="subtitle">
+                Computer Science - Montréal, Québec
+            </p>
+
+            <nav class="links">
+                <a href="https://github.com/rickymolodiez">GitHub</a>
+                <span>·</span>
+                <a href="https://www.linkedin.com/in/ricardom10019/">LinkedIn</a>
+                <span>·</span>
+                <a href="mailto:rickymoloqc@gmail.com">Email</a>
+                <span>·</span>
+                <a href="rickymorales_cv.pdf" target="_blank">CV</a>
+            </nav>
+        </header>
+
+        <hr>
+
+        <section>
+            <h2>About Me</h2>
+            <img src="images/me.jpg" height=390>
+
+            <p>
+                My name is Ricardo, I am a computer science student at Concordia University in downtown Montréal.
+            </p>
+
+            <p>
+                I enjoy learning about how hardware interacts with software in order to mask abstractions. Naturally,
+                this led me to programming in assembly language, C/C++, learning about
+                operating systems, kernels, computer architecture. CPUs are silently carrying today's world.
+            </p>
+
+            <p>
+                Outside of school, I enjoy learning languages, reading novels, keeping up with motorsports and football,
+                playing videogames, attending electronic music concerts, going to the gym, spending time with loved
+                ones, and taking
+                care of my cat Stella.
+            </p>
+
+            <p>
+                While completing university and kickstarting my software journey, I try to make the most out of living
+                in Montreal. Its the perfect city to ride your bike and try new coffee shops.
+
+            </p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <article>
+                <h3>LLVM libc++abi exception handling</h3>
+
+                <p class=" meta">
+                    LLVM · C++ · CMake · Git
+                </p>
+
+                <p>
+                    Investigated an exception-handling code generation issue
+                    in <code>libc++abi</code>. Developed a fix involving
+                    <code>__cxa_free_exception</code> and added a regression
+                    test. Proposed a PR, still under review.
+                </p>
+
+                <p>
+                    <a href="#">View repository on GitHub →</a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Stage 1 Bootloader</h3>
+
+                <p class="meta">
+                    C · x86 asm · Linux · QEMU
+                </p>
+
+                <p>
+                    Wrote a stage 1 bootloader from scratch using assembly. Debuged using LLDB and virtualized in QEMU.
+                    Initialized the CPU state, set up the stack, and loaded a minimal kernel.
+                </p>
+
+                <p>
+                    <a href="#">View project →</a>
+                </p>
+            </article>
+
+            <article>
+                <h3>Custom memory allocator</h3>
+
+                <p class="meta">
+                    C++ · POSIX · ARM64
+                </p>
+
+                <p>
+                    A custom <code>malloc()</code>function written in C and assembly.
+                    Hybrid best fit/first fit algorithm to partition memory.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Open Source </h2>
+
+            <p>
+                Currently learning the LLVM development workflow and
+                contributing to <code>libc++abi</code>.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="#">LLVM libc++abi</a> —
+                    exception handling investigation and regression testing
+                </li>
+
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+
+            <h3>Concordia University</h3>
+
+            <p>
+                Bachelor of Computer Science
+            <p class="meta">
+                Montréal, Québec
+            </p>
+
+            <p>
+                Coursework includes:
+            </p>
+            <ul>
+                <li>Advanced Computer Architecture</li>
+                <ul>
+                    <li>Instruction level parallelism, pipelining and vectorization</li>
+                    <li>CPU Design and Optimization</li>
+                    <li>RISC 1.0, 2.0, 3.0.</li>
+                </ul>
+                <li> Embedded Systems and software</li>
+                <li>Multicore Programming</li>
+                <ul>
+                    <li>Shared memory and parallel programming, </li>
+                    <li>On and off chip data movement and its orchestration</li>
+                    <li>Programming models and scalability across parallel tasks</li>
+                    <li>Algorithms for multicore task execution</li>
+                    <li>CUDA, OpenMP, TBB, C++ <code>thread</code> library.</li>
+                </ul>
+            </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+
+            <p>
+                <code>C</code>
+                <code>C++</code>
+                <code>Python</code>
+                <code>Linux</code>
+                <code>MacOS/XNU</code>
+                <code>Java</code>
+                <code>Git</code>
+                <code>CMake</code>
+                <code>LLVM</code>
+                <code>Assembly (ARM/x86)</code>
+                <code>OpenGL</code>
+            </p>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+
+            <ul>
+                <li>Systems software programming</li>
+                <li>Compilers and runtimes</li>
+                <li>Operating systems</li>
+                <li>Computer architecture</li>
+                <li>Embedded Linux</li>
+                <li>Low-level performance</li>
+                <li>Assembly language</li>
+                <li>Software engineering and development practices</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>
+                <small>
+                    © 2026 Ricardo Morales
+                </small>
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
