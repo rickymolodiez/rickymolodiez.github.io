@@ -89,19 +89,21 @@
             </article>
 
             <article>
-                <h3>Stage 1 Bootloader</h3>
+                <h3>2-stage BIOS Bootloader</h3>
 
                 <p class="meta">
-                    C · x86 asm · Linux · QEMU
+                    x86 Assembly · C · NASM · QEMU
                 </p>
 
                 <p>
-                    Wrote a stage 1 bootloader from scratch using assembly. Debuged using LLDB and virtualized in QEMU.
-                    Initialized the CPU state, set up the stack, and loaded a minimal kernel.
+                    Wrote a 2-stage bootloader from scratch using x86 assembly. It loads the kernel into disk, sets up
+                    stack, switches from 16-bit real mode to 32-bit protected mode in 512 bytes.
+                    Uses a custom written GDT and loads kernel which prints straight to GPU memory.
+                    Virtualized in QEMU.
                 </p>
 
                 <p>
-                    <a href="#">View project →</a>
+                    <a href="https://github.com/rickymolodiez/StellBoot">View on GitHub →</a>
                 </p>
             </article>
 
