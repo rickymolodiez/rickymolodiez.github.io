@@ -200,3 +200,35 @@ footer {
         font-size: 1.35rem;
     }
 }
+
+/* Blog posts */
+
+h4 {
+    margin: 24px 0 8px;
+    font-size: 1rem;
+    color: #8fc7d5;
+}
+
+pre {
+    margin: 0 0 16px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+pre code {
+    padding: 0;
+    background: none;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+article img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 16px;
+    border-radius: 6px;
+}

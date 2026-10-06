@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog · Ricardo Morales</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Notes on systems programming, bootloaders and low-level software.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <h1>Ricardo Morales</h1>
+            <p class="subtitle">Blog</p>
+
+            <nav class="links">
+                <a href="index.html">Home</a>
+                <span>·</span>
+                <a href="https://github.com/rickymolodiez">GitHub</a>
+                <span>·</span>
+                <a href="https://www.linkedin.com/in/ricardom10019/">LinkedIn</a>
+                <span>·</span>
+                <a href="mailto:rickymoloqc@gmail.com">Email</a>
+                <span>·</span>
+                <a href="rickymorales_cv.pdf" target="_blank">CV</a>
+
+
+            </nav>
+        </header>
+
+        <hr>
+
+        <section>
+            <h2>Blog Posts</h2>
+
+            <article id="stellboot">
+                <h3>Thoughts on Stage 2 bootloader project development</h3>
+
+                <p class="meta">
+                    October 5, 2026 · x86 asm · C · QEMU
+                </p>
+                <img src="images/bootloader.png" alt="StellBoot running in QEMU" width="400">
+                <p>
+                    Although I actually started this project more than a year ago, it was only until last week when I
+                    revisited it.
+                    It had been a while since I manually wrote assembly, and I had never done it that thoroughly.
+                    I forgot how much time is spent googling what each register does and how many bits it stores.
+                    Incase you have not seen it from the Linkedin post or through the main homepage of my website,
+                    you can access the repo <a href="https://github.com/rickymolodiez/StellBoot"
+                        target="blank">here.</a><br>
+                    <br>
+                    I named it StellBoot just so there was something different to look at when I ls -a'd into my GitHub
+                    folder. Originally
+                    I thought I was going to write a whole OS from scratch and name it after my cat,
+                    but that proved too big of a task. So I just started with StellBoot, and who knows, maybe in the
+                    future I'll end up
+                    going through the suffering of writing a kernel from scratch. I'm already working on other OSdev
+                    related things.<br><br>
+                    The main reason I chose a bootloader is because I wanted to dive into the time-consuming rabit hole
+                    of writing
+                    assembly from scratch. When I first started the project at the end of 2025, I was taking a
+                    university course on
+                    computer architecture, which focused mostly on CPUs and their optimization. The exams in that class
+                    had a lot of
+                    assembly in them, but it was all recognition. It's easy to read x86 ASM when the program is a couple
+                    of conditional jumps
+                    and an index variable to simulate a for loop. However, if I want to work with CPU's in a real
+                    professional workplace,
+                    I'd have to learn something more than that. I won't write the step by step of how the program works
+                    because I have done that
+                    in the repository already, so I'll just end on a quick note.<br>
+
+                <h4>The coolest instruction in the bootloader</h4>
+                For me, the best part of the bootloader was restricting everything to 512 bytes. Sure, modern programs
+                are very
+                memory efficient, but unless you work in aerospace or something like that, an extra byte probably won't
+                kill anyone.
+                At the end of the program, <code>times 510-($-$$) db 0</code> fills the rest of the file with 0s for
+                it to
+                amount to exactly 512 bytes. (It's actually 510 because of the 0xAA55 directive, which is 2 bytes long,
+                and needs to be
+                at EOF for it to tell the BIOS
+                the
+                current file is a bootloader and needs to be bootable). Also, in NASM, $ stands for the
+                address
+                of the
+                current line being
+                assembled,
+                while $$ is the address of the section, which in this case is the file. So this instruction is a loop
+                of jumping back and forth (EOF - 2 bytes) and the start of the current section, filling it with zeroes.
+                That blew my mind at the beginning, how efficient it is. In C that would have taken much more overhead.
+
+                <h4>What's next with this project</h4>
+                I'm not sure if I will touch a bootloader again, however, this gave me experience in firmware
+                development
+                and memory critical programming, which I am interested in further exploring. Many of the concepts here
+                can be
+                applied to other types of software. Especially if I keep on diving into assembly.
+                I will keep on learning the ins and outs of asm in order
+                to become
+                a better programmer who understands what I'm doing when writing c or c++ code.
+
+
+
+
+                </p>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>
+                <small>© 2026 Ricardo Morales</small>
+            </p>
+        </footer>
+
+    </main>
+</body>
+
+</html>
